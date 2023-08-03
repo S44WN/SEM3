@@ -36,7 +36,7 @@ void - 0 byte
 #include <iostream>
 using namespace std;
 
-int main()
+int datatypes()
 {
     char a = 'A';
     signed char b = 'B';
@@ -94,5 +94,47 @@ int main()
 
     cout << "bool: " << t << endl;
 
+    return 0;
+}
+
+int datatypesValue()
+{
+    cout << "char: " << sizeof(char) << endl;
+    cout << "signed char: " << sizeof(signed char) << endl;
+    cout << "unsigned char: " << sizeof(unsigned char) << endl;
+
+    cout << "int: " << sizeof(int) << endl;
+    cout << "signed int: " << sizeof(signed int) << endl;
+    cout << "unsigned int: " << sizeof(unsigned int) << endl;
+
+    cout << "short int: " << sizeof(short int) << endl;
+    cout << "signed short int: " << sizeof(signed short int) << endl;
+    cout << "unsigned short int: " << sizeof(unsigned short int) << endl;
+
+    cout << "long int: " << sizeof(long int) << endl;
+    cout << "signed long int: " << sizeof(signed long int) << endl;
+    cout << "unsigned long int: " << sizeof(unsigned long int) << endl;
+
+    cout << "long long int: " << sizeof(long long int) << endl;
+
+    cout << "signed long long int: " << sizeof(signed long long int) << endl;
+    cout << "unsigned long long int: " << sizeof(unsigned long long int) << endl;
+
+    cout << "float: " << sizeof(float) << endl;
+
+    cout << "double: " << sizeof(double) << endl;
+    cout << "long double: " << sizeof(long double) << endl;
+
+    cout << "wchar_t: " << sizeof(wchar_t) << endl;
+
+    cout << "bool: " << sizeof(bool) << endl;
+
+    return 0;
+}
+
+int main()
+{
+    datatypes();
+    datatypesValue();
     return 0;
 }
