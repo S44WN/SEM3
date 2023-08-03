@@ -34,6 +34,7 @@ void - 0 byte
 */
 
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int datatypes()
@@ -132,9 +133,109 @@ int datatypesValue()
     return 0;
 }
 
+// what is typedef? why do we use it? how to use it?
+
+// typedef is used to give a new name to an existing datatype
+// typedef is used to make the program more readable portable maintainable secure understandable
+// how to use it? - 2 ways
+// 1. creating a new name for an existing datatype
+// syntax: typedef existing_datatype new_name;
+
+// 2. creating a new name for an existing user defined datatype
+// syntax: typedef existing_user_defined_datatype new_name;
+
+// example:
+typedef int integer;
+typedef float real;
+
+int typedefExample1()
+{
+    integer a = 10;
+    real b = 3.14;
+    cout << "integer: " << a << endl;
+    cout << "real: " << b << endl;
+
+    return 0;
+}
+
+// example of user defined datatype
+struct student
+{
+    int rollno;
+    char name[20];
+    float marks;
+};
+
+int typedefExample2()
+{
+    student s1;
+    s1.rollno = 1;
+    strcpy(s1.name, "Rahul");
+    s1.marks = 45.67;
+    cout << "Roll No: " << s1.rollno << endl;
+    cout << "Name: " << s1.name << endl;
+    cout << "Marks: " << s1.marks << endl;
+
+    return 0;
+}
+
+int typedefExample()
+{
+    typedefExample1();
+    typedefExample2();
+    return 0;
+}
+
+// what is enum? why do we use it? how to use it?   (enumeration)
+
+// enum is a user defined datatype
+// enum is used to assign names to integral constants
+// enum is used to make the program more readable
+
+// syntax:
+// enum enum_name {list of names} variable_names;
+
+// example:
+enum week
+{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+int enumexaple1()
+{
+    week today;
+    today = Wednesday;
+    cout << "Day " << today + 1 << endl;
+    return 0;
+}
+
+// enum is used to assign names to integral constants
+// enum is used to make the program more readable
+
+enum seasons
+{
+    spring = 7,
+    summer = 4,
+    autumn = 9,
+    winter = 12
+};
+
+int enumexaple2()
+{
+    seasons s;
+    s = summer;
+    cout << "Summer: " << s << endl;
+}
+
 int main()
 {
-    datatypes();
-    datatypesValue();
+    enumexaple1();
+    enumexaple2();
     return 0;
 }
