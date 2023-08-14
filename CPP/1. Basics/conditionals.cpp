@@ -126,27 +126,3 @@ int main()
     // ifelseswitch();
     return 0;
 }
-
-// Explain dynamic declaration with example
-
-int main()
-{
-    int a, b;
-    if (a > b)
-    {
-        int c = 10;
-        cout << c << endl;
-    }
-}
-
-// declared in condition itself - cpp17 feature
-if (int a = 10; a > 5)
-{
-    cout << a << endl;
-}
-
-// use in counters
-for (int i = 0; i < 10; i++)
-{
-    cout << i << endl;
-}
