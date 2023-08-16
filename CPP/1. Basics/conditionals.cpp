@@ -119,10 +119,115 @@ int quadraticroots()
     }
 }
 
+int whichday()
+{
+    int choice;
+    cout << "Enter a number between 1 and 7: ";
+    cin >> choice;
+    switch (choice)
+    {
+    case 1:
+        cout << "Monday" << endl;
+        break;
+    case 2:
+        cout << "Tuesday" << endl;
+        break;
+    case 3:
+        cout << "Wednesday" << endl;
+        break;
+    case 4:
+        cout << "Thursday" << endl;
+        break;
+    case 5:
+        cout << "Friday" << endl;
+        break;
+    case 6:
+        cout << "Saturday" << endl;
+        break;
+    case 7:
+        cout << "Weekend" << endl;
+        break;
+    default:
+        cout << "Invalid choice" << endl;
+    }
+}
+
+int menuprog()
+{
+    int choice;
+    cout << "Menu\n";
+    cout << "1. Add\n"
+         << "2. Subtract\n"
+         << "3. Multiply\n"
+         << "4. Divide\n";
+    cin >> choice;
+
+    int a, b;
+    cout << "Enter 2 numbers to use: ";
+    cin >> a >> b;
+
+    switch (choice)
+    {
+    case 1:
+        cout << a << " + " << b << " = " << a + b << endl;
+        break;
+
+    case 2:
+        cout << a << " - " << b << " = " << a - b << endl;
+        break;
+
+    case 3:
+        cout << a << " * " << b << " = " << a * b << endl;
+        break;
+
+    case 4:
+        cout << a << " / " << b << " = " << a / b << endl;
+        break;
+
+    default:
+        cout << "Invalid choice" << endl;
+    }
+}
+
+int bills()
+{
+    int tamount, discount, finalamount;
+    cout << "Enter the total amount: ";
+    cin >> tamount;
+
+    switch (tamount)
+    {
+    case 1000 ... 2000:
+        discount = 10;
+        break;
+
+    case 2001 ... 3000:
+        discount = 20;
+        break;
+
+    case 3001 ... 4000:
+        discount = 30;
+        break;
+
+    default:
+        discount = 40;
+    }
+}
+
 int main()
 {
     // youngorNot();
-    maxof3nos();
+    // maxof3nos();
     // ifelseswitch();
+    // quadraticroots();
+    // whichday();
+    multble();
     return 0;
 }
+
+// for each loop syntax
+
+// for (type var : array)
+// {
+//     // body
+// }
