@@ -1,0 +1,1 @@
+// create a file using open system call then write inside that file "IwillbeplacedinGoogleandAmazon" then delete the characters "inGoogleand" from the string using lseek system call and display rest of the characters
