@@ -61,4 +61,57 @@ int main()
     // delete[] q; // delete the dynamic array but still taking memory
     q = nullptr; // q is now pointing to null
     delete[] q;  // delete the dynamic array
+
+    // 2d array
+    int a[3][4];                                                 // 3 rows and 4 columns
+    int a[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}; // 3 rows and 4 columns
+    int a[3][4] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};       // 3 rows and 4 columns
+    int a[][4] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};        // 3 rows and 4 columns
+
+    // input in 2d array
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+
+    // output in 2d array
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // dynamic 2d array
+    int **p;          // pointer to pointer? why? - 2d array is array of arrays
+    p = new int *[3]; // 3 rows
+
+    for (int i = 0; i < 3; i++)
+    {
+        p[i] = new int[4]; // 4 columns
+    }
+
+    // input in 2d array
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            cin >> p[i][j];
+        }
+    }
+
+    // output in 2d array
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            cout << p[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
