@@ -114,4 +114,10 @@ int main()
         }
         cout << endl;
     }
+
+    // delete 2d array
+    for (int i = 0; i < 3; i++)
+    {
+        delete[] p[i];
+    }
 }
