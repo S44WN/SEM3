@@ -105,19 +105,19 @@ int main()
         }
     }
 
-    // output in 2d array
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            cout << p[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // // output in 2d array
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 4; j++)
+    //     {
+    //         cout << p[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
-    // delete 2d array
-    for (int i = 0; i < 3; i++)
-    {
-        delete[] p[i];
-    }
+    // // delete 2d array
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     delete[] p[i];
+    // }
 }
